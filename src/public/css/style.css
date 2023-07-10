@@ -1,0 +1,69 @@
+body {
+    margin-top: 1cm;
+    margin-left: 1cm;
+    margin-right: 1cm;
+    margin-bottom: 1cm;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo-izquierda,
+.logo-derecha {
+  text-align: left;
+}
+
+.logo-izquierda img,
+.logo-derecha img {
+  max-width: 100%;
+  height: auto;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.informacion {
+  flex: 1;
+  text-align: center;
+}
+
+.informacion h1 {
+  text-align: center;
+  font-size: 5mm;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.main {
+    margin-right: auto;
+    text-align: right;
+}
+
+.rightcolumn {
+    color: white;
+    background-color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.card {
+  border: 1px solid black;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.card h2 {
+  font-size: 4mm;
+  text-decoration: underline;
+}
+
+.card p {
+  font-size: 3.5mm;
+}
+
+.inputBox {
+  margin-bottom: 10px;
+}
