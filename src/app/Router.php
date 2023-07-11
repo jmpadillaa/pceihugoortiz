@@ -24,11 +24,7 @@ class Router {
         $controllerName = $parts[0] ?? '';
         $actionName = $parts[1] ?? '';
 
-        $args = [];
-
-        for ($i = 2; $i < $partsLen; $i++) {
-            $args[] = $parts[$i];
-        }
+        parse_str($_SERVER['QUERY_STRING'], $args);
 
         if (empty($controllerName)) {
             $controllerName = 'HomeController';
@@ -50,8 +46,12 @@ class Router {
     private function getURLParts() {
         $url = $_SERVER['REQUEST_URI'];
 
-        //TODO eliminar '/' al inicio
+        $pos = strpos($url, '?');
 
+        if ($pos) {
+            $url = substr($url, 0, $pos);
+        }
+        
         if (defined('APP_ROOT_PATH')) {
             $url = substr($url, strlen(APP_ROOT_PATH));
         }
