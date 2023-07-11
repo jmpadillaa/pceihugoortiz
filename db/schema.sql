@@ -71,3 +71,11 @@ CREATE TABLE inscriptor (
   apellidos CHARACTER VARYING(50),
   identificacion CHARACTER VARYING(50)
 );
+
+CREATE TABLE usuario (
+  id SERIAL PRIMARY KEY,
+  nombre CHARACTER VARYING(50),
+  login CHARACTER VARYING(20),
+  password CHARACTER VARYING(128),
+  activo BOOLEAN
+);

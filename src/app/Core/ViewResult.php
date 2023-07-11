@@ -44,7 +44,33 @@ class ViewResult {
         }
     }
 
+    private function isAuthenticated() {
+        return session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['userId']);
+    }
+
+    private function userLogin() {
+        return $_SESSION['userLogin'];
+    }
+
     private function setTitle($title) {
         $this->title = $title;
+    }
+
+    private function showAlerts() {
+        if (session_status() != PHP_SESSION_ACTIVE) {
+            return;
+        }
+
+        if (!isset($_SESSION['alerts'])) {
+            return;
+        }
+
+        $alerts = $_SESSION['alerts'];
+        
+        unset($_SESSION['alerts']);
+
+        foreach ($alerts as $key => $msg) {
+            echo sprintf('<div class="alert alert-%s">%s</div>', $key, $msg);
+        }
     }
 }

@@ -61,6 +61,3 @@ class Router {
         return explode('/', $url);
     }
 }
-
-$router = new Router();
-$router->dispatch();

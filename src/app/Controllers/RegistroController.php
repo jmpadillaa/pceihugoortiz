@@ -19,9 +19,11 @@ class RegistroController extends BaseController {
     }
 
     public function index() {
-        if (!empty($_POST)) {
-            date_default_timezone_set('America/Guayaquil');
+        if (!$this->isAuthenticated()) {
+            return $this->redirect('/account/login');
+        }
 
+        if ($this->isPost()) {
             $a = new Aspirante();
             $a->fechaRegistro = date(DateTimeInterface::ISO8601, time());
             $this->mapModel($a, $_POST);

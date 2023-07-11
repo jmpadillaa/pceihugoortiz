@@ -1,8 +1,5 @@
 body {
-    margin-top: 1cm;
-    margin-left: 1cm;
-    margin-right: 1cm;
-    margin-bottom: 1cm;
+    padding-top: 80px;
 }
 
 .header {
@@ -47,12 +44,6 @@ body {
     background-color: #333;
     padding: 10px 20px;
     text-decoration: none;
-}
-
-.card {
-  border: 1px solid black;
-  margin-bottom: 20px;
-  padding: 10px;
 }
 
 .card h2 {
