@@ -37,7 +37,10 @@ function toggleSelectName(select, input) {
 function toggleInputs(enable, inputs) {
   for (let i = 0; i < inputs.length; i++) {
       inputs[i].disabled = !enable;
-      inputs[i].value = '';
+
+      if (!enable) {
+        inputs[i].value = '';
+      }
   }
 }
 
@@ -69,7 +72,7 @@ let inputsHijos = document.querySelectorAll('.num-hijos');
 
 document.querySelectorAll('#tieneHijosSi, #tieneHijosNo').forEach(function(i) {
     i.addEventListener('change', function () {   
-        let enable = this.value === 'si';
+        let enable = this.value === 'true';
       
         toggleInputs(enable, inputsHijos);
     });
@@ -79,8 +82,17 @@ let inputsDisc = document.querySelectorAll('.discapacidad');
 
 document.querySelectorAll('#tieneDiscapacidadSi, #tieneDiscapacidadNo').forEach(function(i) {
     i.addEventListener('change', function () {   
-        let enable = this.value === 'si';
+        let enable = this.value === 'true';
       
         toggleInputs(enable, inputsDisc);
     });
+});
+
+document.querySelectorAll('select[data-value]').forEach(function (select) {
+    for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].value === select.dataset.value) {
+            select.options[i].selected = true;
+            break;
+        }
+    }
 });
