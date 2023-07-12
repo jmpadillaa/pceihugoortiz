@@ -14692,7 +14692,7 @@ div.u-video,
   display: table;
 }
 .u-menu {
-  opacity: 0;
+  opacity: 1;
 }
 .u-responsive-xxl .u-menu,
 .u-responsive-xl .u-menu,
