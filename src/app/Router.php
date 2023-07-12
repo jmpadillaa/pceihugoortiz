@@ -24,7 +24,11 @@ class Router {
         $controllerName = $parts[0] ?? '';
         $actionName = $parts[1] ?? '';
 
-        parse_str($_SERVER['QUERY_STRING'], $args);
+        if (isset($_SERVER['QUERY_STRING'])) {
+            parse_str($_SERVER['QUERY_STRING'], $args);
+        } else {
+            $args = [];
+        }
 
         if (empty($controllerName)) {
             $controllerName = 'HomeController';
