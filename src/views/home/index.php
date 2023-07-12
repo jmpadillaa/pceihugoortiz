@@ -5,14 +5,15 @@
     <meta charset="utf-8">
     <meta name="keywords" content="TENIENTE HUGO ORTIZ">
     <title>Casa | Teniente Hugo Ortíz</title>
-    <link rel="stylesheet" href="public/css/nicepage.css" media="screen">
-    <link rel="stylesheet" href="public/css/casa.css" media="screen">
+    <link rel="stylesheet" href="<?= $this->url('/public/css/nicepage.css') ?>" media="screen">
+    <link rel="stylesheet" href="<?= $this->url('/public/css/casa.css') ?>" media="screen">
 
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i|Roboto+Condensed:300,300i,400,400i,700,700i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
 
-    <style class="u-overlap-style">.u-overlap:not(.u-sticky-scroll) .u-header {
-        background-color: #478ac9 !important
+    <style class="u-overlap-style">
+        .u-overlap:not(.u-sticky-scroll) .u-header {
+            background-color: #478ac9 !important
         }
     </style>
 </head>
@@ -28,9 +29,8 @@
             <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
                 <div class="u-custom-menu u-nav-container">
                     <ul class="u-nav u-unstyled u-nav-1">
-                        <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base text-decoration-none active" href="#" style="padding: 10px 20px;">Casa</a></li>
-                        <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base text-decoration-none" href="#acercade" style="padding: 10px 20px;">Acerca de</a></li>
-                        <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base text-decoration-none" href="#contactos" style="padding: 10px 20px;">Contacto</a></li>
+                        <li class="u-nav-item"><a class="u-nav-link u-text-hover-palette-2-base" href="https://eva.pceitenientehugoortiz.edu.ec" style="padding: 10px 20px;">Aula virtual</a></li>
+                        <li class="u-nav-item"><a class="u-nav-link u-text-hover-palette-2-base" href="<?= $this->url('/registro') ?>" style="padding: 10px 20px;">Inscripciones</a></li>
                     </ul>
                 </div>
                 
@@ -325,7 +325,7 @@
         <div class="u-clearfix u-sheet u-sheet-1">
             <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
                 <a class="u-social-url" title="facebook" target="_blank" href="https://www.facebook.com/profile.php?id=100084262000018">
-                    <span class="u-icon u-social-facebook u-social-icon u-icon-1">
+                    <span class="u-icon u-social-facebook u-social-icon u-icon-1" style="height: auto !important;width:40px">
                         <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-25b4"></use>
                         </svg>
@@ -337,7 +337,7 @@
                     </span>
                 </a>
                 <a class="u-social-url" title="instagram" target="_blank" href="https://www.facebook.com/profile.php?id=100084262000018">
-                    <span class="u-icon u-social-icon u-social-instagram u-icon-3">
+                    <span class="u-icon u-social-icon u-social-instagram u-icon-3" style="height: auto !important;width:40px">
                         <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-5df0"></use>
                         </svg>
