@@ -12,8 +12,20 @@ class RegistroRepository extends BaseRepository {
     public function listar($buscar, $limit, $offset) {
         $this->createConnection();
 
-        $query = 'select * from aspirante where ' . 
-            '(identificacion ilike :buscar or nombres ilike :buscar or apellidos ilike :buscar)' .
+        $filter = 'where identificacion ilike :buscar or nombres ilike :buscar or apellidos ilike :buscar ';
+
+        $query = 'select count(*) from aspirante ' . $filter;
+
+        $stm = $this->conn->prepare($query);
+        $stm->bindValue(':buscar', '%' . $buscar . '%');
+        $stm->setFetchMode(PDO::FETCH_COLUMN, 0);
+        $stm->execute();
+
+        $count = $stm->fetch();
+        
+        $query = 'select * from aspirante ' . 
+            $filter .
+            'order by id desc ' .
             'limit :limit offset :offset';
 
         $stm = $this->conn->prepare($query);
@@ -37,7 +49,7 @@ class RegistroRepository extends BaseRepository {
             $list[] = $a;
         }
 
-        return $list;
+        return array('count' => $count, 'list' => $list);
     }
 
     public function obtenerAspirante($id) {

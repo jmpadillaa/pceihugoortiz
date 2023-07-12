@@ -17,11 +17,20 @@
 
 <?php $this->showAlerts() ?>
 
-<h4>Registros de aspirantes</h4>
+<h4>
+    Registros de aspirantes
+    <a href="<?= $this->url('/registro/form') ?>" class="btn btn-primary float-end">Nuevo</a>
+</h4>
 
-<div class="text-end">
-    <a href="<?= $this->url('/registro/form') ?>" class="btn btn-primary">Nuevo</a>
-</div>
+<form class="row row-cols-lg-auto g-3 align-items-center justify-content-center my-4">
+    <div class="col-12">
+        <input type="text" placeholder="Buscar" name="search" class="form-control" />
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-secondary">Buscar</button>
+    </div>
+</form>
 
 <table class="table table-striped table-hover">
     <thead>
@@ -37,7 +46,7 @@
         </tr>
     </thead>
     <tbody>
-        <?php foreach($model as $item): ?>
+        <?php foreach($model['list'] as $item): ?>
             <tr>
                 <td>
                     <a href="<?= $this->url('/registro/form?id=' . $item->id) ?>">Editar</a> |
@@ -54,3 +63,4 @@
         <?php endforeach ?>
     </tbody>
 </table>
+<?= $model['count'] ?> registro(s)

@@ -18,18 +18,14 @@ class RegistroController extends BaseController {
         $this->repo = new RegistroRepository();
     }
 
-    public function index($buscar = '', $limit = 10, $offset = 0) {
+    public function index($search = '', $limit = 10, $offset = 0) {
         if (!$this->isAuthenticated()) {
             return $this->redirect('/account/login');
         }
 
-        $lista = $this->repo->listar($buscar, $limit, $offset);
+        $model = $this->repo->listar($search, $limit, $offset);
 
-        if (!$lista) {
-            $lista = [];
-        }
-
-        return $this->view('registro/index', model: $lista);
+        return $this->view('registro/index', model: $model);
     }
 
     public function form($id = 0) {
