@@ -5,21 +5,19 @@ namespace App\Models;
 class Representante {
     public int $id = 0;
 
-    public string $parentesco;
+    public $parentesco;
 
-    public string $nombres;
+    public $nombres;
 
-    public string $apellidos;
+    public $apellidos;
 
-    public string $tipoIdentificacion;
+    public $tipoIdentificacion;
 
-    public string $identificacion;
+    public $identificacion;
 
-    public string $genero;
+    public $genero;
 
-    public string $estadoCivil;
+    public $estadoCivil;
 
-    public string $fechaNacimiento;
-
-    public int $aspirante_id = 0;
+    public $fechaNacimiento;
 }

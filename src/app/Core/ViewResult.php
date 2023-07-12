@@ -73,4 +73,12 @@ class ViewResult {
             echo sprintf('<div class="alert alert-%s">%s</div>', $key, $msg);
         }
     }
+
+    private function url($url) {
+        if (defined('APP_ROOT_PATH')) {
+            return APP_ROOT_PATH . $url;
+        }
+
+        echo $url;
+    }
 }

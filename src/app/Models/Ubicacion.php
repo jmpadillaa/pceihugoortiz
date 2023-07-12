@@ -5,21 +5,19 @@ namespace App\Models;
 class Ubicacion {
     public int $id = 0;
 
-    public string $provincia;
+    public $provincia;
 
-    public string $zona;
+    public $zona;
 
-    public string $canton;
+    public $canton;
 
-    public string $distrito;
+    public $distrito;
 
-    public string $parroquia;
+    public $parroquia;
 
-    public string $circuito;
+    public $circuito;
 
-    public string $sector;
+    public $sector;
     
-    public string $direccion;
-
-    public int $aspirante_id= 0;
+    public $direccion;
 }

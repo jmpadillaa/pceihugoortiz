@@ -32,7 +32,11 @@ CREATE TABLE aspirante (
   aniosrezago CHARACTER VARYING(50),
   anioaprobado CHARACTER VARYING(50),
   regimen CHARACTER VARYING(50),
-  servicioeducativo CHARACTER VARYING(50)
+  servicioeducativo CHARACTER VARYING(50),
+  representante_id INTEGER,
+  ubicacion_id INTEGER,
+  CONSTRAINT representante_fk FOREIGN KEY (representante_id) REFERENCES public.representante(id),
+  CONSTRAINT ubicacion_fk FOREIGN KEY (ubicacion_id) REFERENCES public.ubicacion(id)
 );
 
 -- Creación de la tabla "Representante"
@@ -46,8 +50,7 @@ CREATE TABLE representante (
   genero CHARACTER VARYING(1),
   estadocivil CHARACTER VARYING(20),
   fechanacimiento DATE,
-  aspirante_id INTEGER,
-  CONSTRAINT aspirante_fk FOREIGN KEY (aspirante_id) REFERENCES public.aspirante(id)
+  aspirante_id INTEGER
 );
 
 -- Creación de la tabla "Ubicacion"
@@ -61,8 +64,7 @@ CREATE TABLE ubicacion (
   circuito CHARACTER VARYING(50),
   sector CHARACTER VARYING(50),
   direccion CHARACTER VARYING(100),
-  aspirante_id INTEGER,
-  CONSTRAINT aspirante_fk FOREIGN KEY (aspirante_id) REFERENCES public.aspirante(id)
+  aspirante_id INTEGER
 );
 
 CREATE TABLE inscriptor (

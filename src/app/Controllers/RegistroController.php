@@ -18,28 +18,60 @@ class RegistroController extends BaseController {
         $this->repo = new RegistroRepository();
     }
 
-    public function index() {
+    public function index($buscar = '', $limit = 10, $offset = 0) {
         if (!$this->isAuthenticated()) {
             return $this->redirect('/account/login');
         }
 
-        if ($this->isPost()) {
+        $lista = $this->repo->listar($buscar, $limit, $offset);
+
+        if (!$lista) {
+            $lista = [];
+        }
+
+        return $this->view('registro/index', model: $lista);
+    }
+
+    public function form($id = 0) {
+        if (!$this->isAuthenticated()) {
+            return $this->redirect('/account/login');
+        }
+
+        if ($id == 0) {
             $a = new Aspirante();
-            $a->fechaRegistro = date(DateTimeInterface::ISO8601, time());
+            $a->representante = new Representante();
+            $a->ubicacion = new Ubicacion();
+        } else {
+            $a = $this->repo->obtenerAspirante($id);
+        }
+
+        if ($this->isPost()) {
             $this->mapModel($a, $_POST);
 
-            $r = new Representante();
-            $this->mapModel($r, $_POST['representante']);
+            if ($a->id == 0) {
+                $a->fechaRegistro = date(DateTimeInterface::ISO8601, time());
+            }
 
-            $u = new Ubicacion();
-            $this->mapModel($u, $_POST['ubicacion']);
+            $this->mapModel($a->representante, $_POST['representante']);
 
-            $this->repo->guardar($a, $r, $u);
+            $this->mapModel($a->ubicacion, $_POST['ubicacion']);
 
-            return $this->redirect('/');
+            $this->repo->guardarAspirante($a);
+
+            return $this->redirect('/registro');
         }
         
-        return $this->view('registro/index');
+        return $this->view('registro/form', model: $a);
+    }
+
+    public function delete($id) {
+        if ($this->isPost()) {
+            $this->repo->eliminarAspirante($id);
+
+            $this->successMsg('El registro fue eliminado');
+        }
+
+        return $this->redirect('/registro');
     }
 
     private function mapModel($model, array $source) {
@@ -50,16 +82,16 @@ class RegistroController extends BaseController {
         foreach ($props as $property) {
             $name = $property->name;
 
-            if (isset($source[$name])) {
-                $value = htmlspecialchars($source[$name]);    
-                
-                switch ($property->class) {
-                    case 'boolean':
-                        $model->$name = $value == 'on' || $value == 'true';
-                        break;
-                    default:
-                        $model->$name = $value;
+            if ($property->hasType()) {
+                $type = $property->getType();
+
+                if ($type->getName() == 'object') {
+                    continue;
                 }
+            }            
+
+            if (isset($source[$name])) {
+                $model->$name = htmlspecialchars($source[$name]);
             } else if (!$property->isInitialized($model) && $property->hasDefaultValue()) {
                 $model->$name = $property->getDefaultValue();
             }
