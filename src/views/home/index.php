@@ -29,15 +29,14 @@
             <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
                 <div class="u-custom-menu u-nav-container">
                     <ul class="u-nav u-unstyled u-nav-1">
-                        <li class="u-nav-item"><a class="u-nav-link u-text-hover-palette-2-base" href="https://eva.pceitenientehugoortiz.edu.ec" style="padding: 10px 20px;">Aula virtual</a></li>
+                    <li class="u-nav-item"><a class="u-nav-link u-text-hover-palette-2-base" href="https://eva.pceitenientehugoortiz.edu.ec" style="padding: 10px 20px;">Aula virtual</a></li>
                         <li class="u-nav-item"><a class="u-nav-link u-text-hover-palette-2-base" href="<?= $this->url('/registro') ?>" style="padding: 10px 20px;">Inscripciones</a></li>
                     </ul>
                 </div>
-                
             </nav>
         </div>
     </header>
-    
+
     <section class="u-clearfix u-section-1" id="carousel_05a4">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
             <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
@@ -47,7 +46,7 @@
                             <div class="u-container-layout u-container-layout-1">
                                 <div class="u-align-center u-container-style u-expanded-width u-group u-palette-1-base u-group-1">
                                     <div class="u-container-layout u-container-layout-2">
-                                        <h5 class="u-custom-font u-text u-text-font u-text-1">COLEGIO DE BACHILLERATO PCEI<br>TENIENTE HUGO ORTIZ
+                                        <h5 class="u-custom-font u-text u-text-font u-text-1">COLEGIO DE BACHILLERATO<br>PCEI "TENIENTE HUGO ORTIZ"
                                         </h5>
                                     </div>
                                 </div>
@@ -71,28 +70,28 @@
                             <div class="u-container-layout u-valign-top u-container-layout-1">
                                 <span class="u-file-icon u-icon u-icon-circle u-palette-1-light-2 u-icon-1"><img src="public/img/aprendiendo.png" alt=""></span>
                                 <h4 class="u-align-left u-text u-text-default u-text-1"> Sobre la institución</h4>
-                                <p class="u-align-justify u-text u-text-2"> El Colegio de Bachillerato PCEI Teniente Hugo Ortiz con fecha 17 de Noviembre de 2020 fué aprobada la resolucion para la implementación de bachillerato en las modalidades semipresencial intensivo y semipresencial virtual.</p>
+                                <p class="u-align-justify u-text u-text-2"> El Colegio de Bachillerato PCEI Teniente Hugo Ortiz con fecha 17 de Noviembre de 2020 fué aprobada la resolucion para la implementación de bachillerato en las modalidades semipresencial intensivo y distancia virtual.</p>
                             </div>
                         </div>
                         <div class="u-container-style u-layout-cell u-shape-rectangle u-size-15 u-layout-cell-2">
                             <div class="u-container-layout u-valign-top u-container-layout-2">
                                 <span class="u-file-icon u-icon u-icon-circle u-palette-1-light-2 u-icon-2"><img src="public/img/plantel.jpg" alt=""></span>
                                 <h4 class="u-align-left u-text u-text-default u-text-3">plantel</h4>
-                                <p class="u-align-justify u-text u-text-4"> Se ofrece instalaciones modernas y recursos educativos de calidad para apoyar el aprendizaje de los estudiantes.</p>
+                                <p class="u-align-justify u-text u-text-4"> Cuenta con instalaciones modernas y recursos educativos de calidad para apoyar el aprendizaje de los estudiantes.</p>
                             </div>
                         </div>
                         <div class="u-container-style u-layout-cell u-shape-rectangle u-size-15 u-layout-cell-3">
                             <div class="u-container-layout u-valign-top u-container-layout-3">
                                 <span class="u-file-icon u-icon u-icon-circle u-palette-1-light-2 u-icon-3"><img src="public/img/profesor.png" alt=""></span>
                                 <h4 class="u-align-left u-text u-text-default u-text-5">docentes</h4>
-                                <p class="u-align-justify u-text u-text-6">El personal docente Colegio de Bachillerato PCEI Teniente Hugo Ortiz son profesionales expertos comprometidos con la excelencia educativa para brindar una educación personalizada y de calidad.</p>
+                                <p class="u-align-justify u-text u-text-6">Docente del CB PCEI Teniente Hugo Ortiz son profesionales con experiencia, comprometidos con la excelencia educativa para brindar una educación para jóvenes y adultos personalizada y de calidad.</p>
                             </div>
                         </div>
                         <div class="u-container-style u-layout-cell u-shape-rectangle u-size-15 u-layout-cell-4">
                             <div class="u-container-layout u-valign-top u-container-layout-4">
                                 <span class="u-file-icon u-icon u-icon-circle u-palette-1-light-2 u-icon-4"><img src="public/img/leer.png" alt=""></span>
                                 <h4 class="u-align-left u-text u-text-default u-text-7"> estudiantes&nbsp;</h4>
-                                <p class="u-align-justify u-text u-text-8">Nuestra oferta educativa está dirigida a estudiantes con escolaridad&nbsp;inconclusa, que por diferentes circunstacias de su vida no pudieron concluir el bachillerato.<br>
+                                <p class="u-align-justify u-text u-text-8">Nuestra oferta educativa está dirigida a personas con escolaridad&nbsp;inconclusa, que por diferentes circunstancias de su vida no pudieron concluir los niveles de básica superior y bachillerato.<br>
                                 </p>
                             </div>
                         </div>
@@ -112,28 +111,28 @@
                         <div class="u-container-layout u-similar-container u-container-layout-1">
                             <div class="u-border-8 u-border-palette-1-light-2 u-line u-line-horizontal u-line-1"></div>
                             <h4 class="u-text u-text-default u-text-palette-1-base u-text-3">Básica Superior Modalidad Semipresencial Intensiva</h4>
-                            <p class="u-text u-text-grey-50 u-text-4">Modalidad Intensiva: Aprobación de 8°, 9° y 10° Básico en 10 Meses.&nbsp;</p>
+                            <p class="u-text u-text-grey-50 u-text-4"> Modalidad Intensiva: Aprobación por curso en períodos de 5 meses cada uno.</p>
                         </div>
                     </div>
                     <div class="u-container-style u-list-item u-repeater-item">
                         <div class="u-container-layout u-similar-container u-container-layout-2">
                             <div class="u-border-8 u-border-palette-1-light-2 u-line u-line-horizontal u-line-2"></div>
                             <h4 class="u-text u-text-default u-text-palette-1-base u-text-5">Básica Superior Modalidad a Distancia Virtual&nbsp;</h4>
-                            <p class="u-text u-text-grey-50 u-text-6"> Modalidad Intensiva: Aprobación por curso en periodos de 5 meses cada uno.</p>
+                            <p class="u-text u-text-grey-50 u-text-6"> Modalidad Intensiva: Aprobación por curso en períodos de 5 meses cada uno.</p>
                         </div>
                     </div>
                     <div class="u-container-style u-list-item u-repeater-item">
                         <div class="u-container-layout u-similar-container u-container-layout-3">
                             <div class="u-border-8 u-border-palette-1-light-2 u-line u-line-horizontal u-line-3"></div>
                             <h4 class="u-text u-text-default u-text-palette-1-base u-text-7">Bachillerato General Unificado Modalidad Semipresencial Intensivo</h4>
-                            <p class="u-text u-text-grey-50 u-text-8"> Modalidad Intensiva: Aprobación por curso en periodos de 5 meses cada uno.</p>
+                            <p class="u-text u-text-grey-50 u-text-8"> Modalidad Intensiva: Aprobación por curso en períodos de 5 meses cada uno.</p>
                         </div>
                     </div>
                     <div class="u-container-style u-list-item u-repeater-item">
                         <div class="u-container-layout u-similar-container u-container-layout-4">
                             <div class="u-border-8 u-border-palette-1-light-2 u-line u-line-horizontal u-line-4"></div>
                             <h4 class="u-text u-text-default u-text-palette-1-base u-text-9"> Bachillerato General Unificado Modalidad a Distancia Virtual</h4>
-                            <p class="u-text u-text-grey-50 u-text-10"> Modalidad Intensiva: Aprobación por curso en periodos de 5 meses cada uno.</p>
+                            <p class="u-text u-text-grey-50 u-text-10"> Modalidad Intensiva: Aprobación por curso en períodos de 5 meses cada uno.</p>
                         </div>
                     </div>
                 </div>
@@ -145,11 +144,10 @@
             <div class="u-container-style u-group u-palette-1-base u-group-1">
                 <div class="u-container-layout u-valign-bottom u-container-layout-1">
                     <h2 class="u-text u-text-default u-text-1">¿Qué hacemos?</h2>
-                    <p class="u-align-justify u-text u-text-default u-text-2">Brindamos una modalidad intensiva de educación, enfocada en aprobar cursos en periodos de 5 meses. Nuestro objetivo es proporcionar una educación de alta calidad y promover el aprendizaje eficiente. Ofrecemos un entorno de apoyo y acompañamiento constante para garantizar el éxito académico de nuestros estudiantes. Nos esforzamos por cultivar el desarrollo integral y el logro de metas educativas en un tiempo reducido.</p>
+                    <p class="u-align-justify u-text u-text-default u-text-2">Brindamos servicios educativos en modalidades semipresencial y a distancia en temporalidad intensiva, enfocada en aprobar cursos en periodos de 5 meses. Nuestro objetivo es proporcionar una educación de alta calidad y promover el aprendizaje eficiente. Ofrecemos un entorno de apoyo y acompañamiento constante para garantizar el éxito académico de nuestros estudiantes. Nos esforzamos por cultivar el desarrollo integral y el logro de metas educativas en un tiempo reducido.</p>
                 </div>
             </div>
             <div alt="" class="u-image u-image-circle u-image-1" data-image-width="690" data-image-height="388"></div>
-            <div class="u-palette-1-light-2 u-shape u-shape-circle u-shape-1"></div>
         </div>
     </section>
     <section class="u-clearfix u-palette-1-light-3 u-section-5" id="carousel_7666">
@@ -162,8 +160,8 @@
                         <div class="u-layout-col">
                             <div class="u-container-style u-layout-cell u-left-cell u-shape-rectangle u-size-60 u-white u-layout-cell-1">
                                 <div class="u-container-layout u-valign-bottom u-container-layout-1">
-                                    <h2 class="u-text u-text-default u-text-palette-1-base u-text-1">Nuestros cursos virtuales</h2>
-                                    <p class="u-align-justify u-text u-text-default u-text-2"> Ofrecemos cursos virtuales interactivos y de calidad, con contenido actualizado y recursos innovadores. Nuestros profesores altamente capacitados brindan instrucción personalizada y retroalimentación constante. Fomentamos la participación activa y la colaboración entre estudiantes a través de actividades en línea. Nuestros cursos brindan flexibilidad y comodidad, permitiendo el aprendizaje a su propio ritmo desde cualquier lugar. Proporcionamos una experiencia educativa integral y de alto nivel en un entorno virtual.</p>
+                                    <h2 class="u-text u-text-default u-text-palette-1-base u-text-1">Nuestras aulas virtuales</h2>
+                                    <p class="u-align-justify u-text u-text-default u-text-2"> Nuestro entorno virtual es interactivo y de calidad, con contenido actualizado y recursos innovadores. Nuestros profesores altamente capacitados brindan instrucción personalizada y retroalimentación constante. Fomentamos la participación activa y la colaboración entre estudiantes a través de actividades en línea. Nuestros cursos brindan flexibilidad y comodidad, permitiendo el aprendizaje a su propio ritmo desde cualquier lugar. Proporcionamos una experiencia educativa integral y de alto nivel en un entorno virtual.</p>
                                     <a href="http://eva.pceitenientehugoortiz.edu.ec" class="u-border-2 u-border-palette-1-base u-btn u-button-style u-hover-palette-1-base u-none u-text-black u-text-hover-white u-btn-1">Eva</a>
                                 </div>
                             </div>
@@ -221,7 +219,7 @@
                             <div class="u-container-layout u-container-layout-2">
                                 <img alt="" class="u-image u-image-round u-radius-10 u-image-1" data-image-width="708" data-image-height="715" src="public/img/rector.jpeg">
                                 <h4 class="u-align-left u-text u-text-default u-text-palette-1-base u-text-2"> RECTOR</h4>
-                                <p class="u-align-justify u-text u-text-3"> El Dr. Freddy Zhapa es nuestro Rector, un destacado educador comprometido con la excelencia y el desarrollo educativo. Con amplia experiencia y una visión innovadora, impulsa nuestra institución hacia la vanguardia de la educación. Su enfoque se centra en el aprendizaje integral y el éxito de los estudiantes.</p>
+                                <p class="u-align-justify u-text u-text-3"> El Dr. Freddy Zhapa, actual rector de la institución educativa es un educador comprometido con la excelencia y el desarrollo educativo, con amplia experiencia y una visión innovadora, impulsa nuestra institución hacia la vanguardia de la educación. Su enfoque se centra en el aprendizaje integral y el éxito de los estudiantes.</p>
                             </div>
                         </div>
                     </div>
@@ -231,35 +229,6 @@
     </section>
     <section class="u-clearfix u-palette-1-base u-section-8" id="contactos">
         <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-            <div class="u-align-center u-container-style u-expanded-width-xs u-group u-white u-group-1">
-                <div class="u-container-layout u-container-layout-1">
-                    <h2 class="u-text u-text-1">Contactanos</h2>
-                    <div class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-expanded-width-xs u-form u-form-1">
-                        <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-28 u-form-vertical u-inner-form" style="padding: 10px" source="email" name="form">
-                            <div class="u-form-group u-form-name">
-                                <label for="name-5a14" class="u-form-control-hidden u-label" wfd-invisible="true">Name</label>
-                                <input type="text" placeholder="COLEGIO DE BACHILLERATO PCEI TENIENTE HUGO ORTIZ" id="name-5a14" name="name" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required="">
-                            </div>
-                            <div class="u-form-email u-form-group">
-                                <label for="email-5a14" class="u-form-control-hidden u-label" wfd-invisible="true">Email</label>
-                                <input type="email" placeholder="tnthugortiz23@gmail.com" id="email-5a14" name="email" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required="">
-                            </div>
-                            <div class="u-form-group u-form-message">
-                                <label for="message-5a14" class="u-form-control-hidden u-label" wfd-invisible="true">Message</label>
-                                <textarea placeholder="&quot;¡Contáctanos! Estamos aquí para ayudarte. Envíanos tus consultas y comentarios, y te responderemos a la brevedad posible. Tu satisfacción es nuestra prioridad&quot;." rows="4" cols="50" id="message-5a14" name="message" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required=""></textarea>
-                            </div>
-                            <div class="u-align-center u-form-group u-form-submit">
-                                <a href="#" class="u-border-2 u-border-black u-btn u-btn-submit u-button-style u-hover-black u-none u-text-black u-text-hover-white u-btn-1">Enviar</a>
-                                <input type="submit" value="submit" class="u-form-control-hidden" wfd-invisible="true">
-                            </div>
-                            <div class="u-form-send-message u-form-send-success" wfd-invisible="true"> Thank you! Your message has been sent. </div>
-                            <div class="u-form-send-error u-form-send-message" wfd-invisible="true"> Unable to send your message. Please fix errors then try again. </div>
-                            <input type="hidden" value="" name="recaptchaResponse" wfd-invisible="true">
-                            <input type="hidden" name="formServices" value="9d87bc1e65ec30ae467ee8fccad1a537">
-                        </form>
-                    </div>
-                </div>
-            </div>
             <div class="u-list u-list-1">
                 <div class="u-repeater u-repeater-1">
                     <div class="u-container-style u-list-item u-palette-1-light-3 u-repeater-item u-list-item-1">
@@ -320,7 +289,7 @@
             </div>
         </div>
     </section>
-    
+
     <footer class="u-clearfix u-footer u-grey-80" id="sec-c2d7">
         <div class="u-clearfix u-sheet u-sheet-1">
             <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
