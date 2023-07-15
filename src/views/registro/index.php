@@ -41,6 +41,7 @@
                             </a>
                             <div class="dropdown-menu">
                                 <a href="<?= $this->url('/registro/form?id=' . $item->id) ?>" class="dropdown-item">Editar</a>
+                                <a href="<?= $this->url('/registro/print?id=' . $item->id) ?>" class="dropdown-item">Imprimir</a>
                                 <a href="<?= $this->url('/registro/delete?id=' . $item->id) ?>" class="dropdown-item confirm-delete">Eliminar</a>
                             </div>
                         </div>                      

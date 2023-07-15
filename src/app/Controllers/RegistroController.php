@@ -63,10 +63,14 @@ class RegistroController extends BaseController {
             return $this->redirect('/registro');
         }
         
-        return $this->view('registro/form', model: $a);
+        return $this->view('registro/form', $a);
     }
 
     public function delete($id) {
+        if (!$this->isAuthenticated()) {
+            return $this->redirect('/account/login');
+        }
+
         if ($this->isPost()) {
             $this->repo->eliminarAspirante($id);
 
@@ -74,6 +78,16 @@ class RegistroController extends BaseController {
         }
 
         return $this->redirect('/registro');
+    }
+
+    public function print($id) {
+        if (!$this->isAuthenticated()) {
+            return $this->redirect('/account/login');
+        }
+
+        $a = $this->repo->obtenerAspirante($id);
+
+        return $this->view('registro/print', $a, '');
     }
 
     private function mapModel($model, array $source) {
