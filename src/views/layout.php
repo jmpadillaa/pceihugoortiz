@@ -6,7 +6,8 @@
     <meta name="keywords" content="TENIENTE HUGO ORTIZ">
     <title><?= $pageTitle ?> | Teniente Hugo Ortíz</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?= APP_ROOT_PATH ?>/public/css/style.css" media="screen">
+    <link rel="stylesheet" href="<?= $this->url('/public/css/style.css') ?>" media="screen">
+    <link rel="shortcut icon" href="<?= $this->url('/public/img/icon.png') ?>" />
 </head>
 <body>
     <div class="navbar navbar-expand-lg fixed-top bg-body-tertiary" style="">
@@ -19,7 +20,7 @@
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= APP_ROOT_PATH ?>/registro">Registro aspirantes</a>
+                            <a class="nav-link" href="<?= $this->url('/registro') ?>">Registro aspirantes</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-md-auto">            
@@ -30,10 +31,10 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li>
-                                    <a class="dropdown-item" href="<?= APP_ROOT_PATH ?>/account/password">Cambiar contraseña</a>
+                                    <a class="dropdown-item" href="<?= $this->url('/account/password') ?>">Cambiar contraseña</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="<?= APP_ROOT_PATH ?>/account/logout">Salir</a>
+                                    <a class="dropdown-item" href="<?= $this->url('/account/logout') ?>">Salir</a>
                                 </li>
                             </ul>
                         </li>
