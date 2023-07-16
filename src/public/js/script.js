@@ -30,6 +30,7 @@ function toggleSelectName(select, input) {
     } else if (input.name) {
         select.name = input.name;
         input.name = '';
+        input.value = '';
         input.disabled = true;
     }
 }
@@ -89,10 +90,23 @@ document.querySelectorAll('#tieneDiscapacidadSi, #tieneDiscapacidadNo').forEach(
 });
 
 document.querySelectorAll('select[data-value]').forEach(function (select) {
+    let exists = false;
+
     for (let i = 0; i < select.options.length; i++) {
         if (select.options[i].value === select.dataset.value) {
             select.options[i].selected = true;
+            exists = true;
             break;
         }
+    }
+
+    if (!exists && select.dataset.target) {
+        let input = document.querySelector(select.dataset.target);
+
+        input.value = select.dataset.value;
+        input.disabled = false;
+
+        select.options[select.options.length - 1].selected = true;
+        toggleSelectName(select, input);
     }
 });
