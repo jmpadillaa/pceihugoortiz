@@ -30,7 +30,7 @@ class Aspirante {
     public bool $trabaja = false;
     public $actividadLaboral;
     public $aniosRezago;
-    public $anioAprobado;
+    public $anioInscribe;
     public $regimen;
     public $servicioEducativo;
 

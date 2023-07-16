@@ -30,7 +30,7 @@ CREATE TABLE aspirante (
   trabaja BOOLEAN,
   actividadlaboral CHARACTER VARYING(50),
   aniosrezago CHARACTER VARYING(50),
-  anioaprobado CHARACTER VARYING(50),
+  anioinscribe CHARACTER VARYING(50),
   regimen CHARACTER VARYING(50),
   servicioeducativo CHARACTER VARYING(50),
   representante_id INTEGER,
