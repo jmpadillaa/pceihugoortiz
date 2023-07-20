@@ -31,7 +31,7 @@ class Aspirante {
     public $actividadLaboral;
     public $aniosRezago;
     public $anioInscribe;
-    public $regimen;
+    public $convocatoria;
     public $servicioEducativo;
 
     public int $representante_id = 0;

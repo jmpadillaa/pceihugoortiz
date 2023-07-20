@@ -380,7 +380,7 @@
                 </div>
             </div>
             <div class="row mb-2">
-                <label class="col-form-label col-md-2" for="rezagoAspirante">Años de rezago educativo del aspirante:</label>
+                <label class="col-form-label col-md-2" for="rezagoAspirante">Años de rezago educativoS:</label>
                 <div class="col-md-3">
                     <select name="aniosRezago" class="form-control" required data-value="<?= $model->aniosRezago ?>">
                         <option value="" selected>Seleccione</option>
@@ -392,9 +392,9 @@
                 </div>
             </div>
             <div class="row mb-2">
-                <label class="col-form-label col-md-2" for="ultimoAprobado">Año a inscribirse:</label>
+                <label class="col-form-label col-md-2" for="ultimoAprobado">Último aprobado:</label>
                 <div class="col-md-3">
-                    <select name="anioInscribe" class="form-control" required data-value="<?= $model->anioInscribe ?>">
+                    <select name="ultimoAprobado" class="form-control" required data-value="<?= $model->ultimoAprobado ?>">
                         <option value="" selected>
                             Seleccione
                         </option>
@@ -408,12 +408,18 @@
                 </div>
             </div>
             <div class="row mb-2">
-                <label class="col-form-label col-md-2" for="regimen">Regimen:</label>
+                <label class="col-form-label col-md-2" for="anioInscribe">Año a inscribirse:</label>
                 <div class="col-md-3">
-                    <select name="regimen" class="form-control" required data-value="<?= $model->regimen ?>">
-                        <option value="" selected>Seleccione el regimen</option>
-                        <option value="costa">Regimen costa</option>
-                        <option value="sierra">Regimen sierra</option>
+                    <select name="anioInscribe" class="form-control" required data-value="<?= $model->anioInscribe ?>">
+                        <option value="" selected>
+                            Seleccione
+                        </option>
+                        <option value="8EBG">8vo. E.G.B.</option>
+                        <option value="9EBG">9no. E.G.B.</option>
+                        <option value="10EBG">10mo. E.G.B.</option>
+                        <option value="1BG">1ro. B.G.</option>
+                        <option value="2BG">2do. B.G.</option>
+                        <option value="3BG">3do. B.G.</option>
                     </select>
                 </div>
             </div>
@@ -424,6 +430,15 @@
                         <option value="" selected>Seleccion de servicio educativo</option>
                         <option value="EGB">Educación General Básica Superior EGB-S - 5 meses cada grado (intensiva)</option>
                         <option value="BG">Bachillerato General BG - 5 meses cada curso (intensiva)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <label class="col-form-label col-md-2" for="convocatoria">Convocatoria:</label>
+                <div class="col-md-3">
+                    <select name="convocatoria" class="form-control" required data-value="<?= $model->convocatoria ?>">
+                        <option value="" selected>Seleccione</option>
+                        <option value="1">1era convocatoria</option>
                     </select>
                 </div>
             </div>
