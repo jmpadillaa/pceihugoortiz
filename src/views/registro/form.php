@@ -380,7 +380,7 @@
                 </div>
             </div>
             <div class="row mb-2">
-                <label class="col-form-label col-md-2" for="rezagoAspirante">Años de rezago educativoS:</label>
+                <label class="col-form-label col-md-2" for="rezagoAspirante">Años de rezago educativos:</label>
                 <div class="col-md-3">
                     <select name="aniosRezago" class="form-control" required data-value="<?= $model->aniosRezago ?>">
                         <option value="" selected>Seleccione</option>
@@ -428,8 +428,8 @@
                 <div class="col-md-3">
                     <select name="servicioEducativo" class="form-control" required data-value="<?= $model->servicioEducativo ?>">
                         <option value="" selected>Seleccion de servicio educativo</option>
-                        <option value="EGB">Educación General Básica Superior EGB-S - 5 meses cada grado (intensiva)</option>
-                        <option value="BG">Bachillerato General BG - 5 meses cada curso (intensiva)</option>
+                        <option value="EGB">Básica superior</option>
+                        <option value="BG">Bachillerato</option>
                     </select>
                 </div>
             </div>

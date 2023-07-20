@@ -73,7 +73,7 @@ let inputsHijos = document.querySelectorAll('.num-hijos');
 
 document.querySelectorAll('#tieneHijosSi, #tieneHijosNo').forEach(function(i) {
     i.addEventListener('change', function () {   
-        let enable = this.value === 'true';
+        let enable = this.value === '1';
       
         toggleInputs(enable, inputsHijos);
     });

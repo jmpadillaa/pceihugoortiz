@@ -108,17 +108,19 @@
             });
         });
 
-        document.querySelectorAll('.confirm-delete').forEach(function (evt) {
-            evt.preventDefault();
+        document.querySelectorAll('.confirm-delete').forEach(function (a) {
+            a.addEventListener('click', function (evt) {
+                evt.preventDefault();
 
-            if (confirm('Deseas eliminar el registro?')) {
-                let form = document.createElement('form');
-                form.method = 'post';
-                form.action = evt.target.href;
+                if (confirm('Deseas eliminar el registro?')) {
+                    let form = document.createElement('form');
+                    form.method = 'post';
+                    form.action = evt.target.href;
 
-                document.querySelector('body').appendChild(form);
-                form.submit();
-            }            
+                    document.querySelector('body').appendChild(form);
+                    form.submit();
+                }
+            });
         });
     }());
 </script>

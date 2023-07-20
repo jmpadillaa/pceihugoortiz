@@ -24,7 +24,7 @@
         El/la aspirante <?= $model->apellidos ?> <?= $model->nombres ?> portador/a del documento
         Nro. <?= $model->identificacion ?> fue inscrito en la Modalidad Educativa: A DISTANCIA VIRTUAL
         del Colegio de Bachillerato Teniente Hugo Ortiz, en el Periodo: CONVOCATORIA 1, en
-        <?= $model->servicioEducativo == 'egb' ? 'Educación General Básica Superior EGB-S' : 'Bachillerato General BG' ?>,
+        <?= $model->servicioEducativo == 'egb' ? 'Básica superior' : 'Bachillerato' ?>,
         el dia <?= date('d/m/Y',strtotime($model->fechaRegistro)) ?>
     </p>
 
@@ -66,12 +66,12 @@
     </div>
 
     <div class="row" style="margin-top:120px">
-        <div class="col-sm-6 text-center">
+        <div class="col text-center">
             <hr style="width:260px;margin:0 auto" />
             <?= $model->apellidos ?> <?= $model->nombres ?>
             <br />ASPIRANTE
         </div>
-        <div class="col-sm-4 text-center">
+        <div class="col text-center">
             <hr style="width:260px;margin:0 auto" />
             Sandra Bravo
             <br />INSCRIPTOR
