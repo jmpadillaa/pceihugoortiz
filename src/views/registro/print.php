@@ -14,15 +14,17 @@
 </head>
 <body>
     <div class="text-center">
-        <img src="<?= $this->url('/public/img/logo-institucion.jpg') ?>">
+        <img src="<?= $this->url('/public/img/ministerio-gobierno.jpeg') ?>" style="width: 200px" />
+        <img src="<?= $this->url('/public/img/escudo.jpeg') ?>" style="width: 100px" />
     </div>
-    <h4 class="text-center mt-3">PCEI TENIENTE HUGO ORTÍZ</h4>
-    <h5 class="text-center">CERTIFICADO DE INSCRIPCIÓN </h5>
+
+    <h5 class="text-center mt-4">CERTIFICADO DE INSCRIPCIÓN </h5>
 
     <p class="my-4" style="text-align:justify">
         El/la aspirante <?= $model->apellidos ?> <?= $model->nombres ?> portador/a del documento
-        Nro. <?= $model->identificacion ?> fue inscrito en la Modalidad Educativa Virtual Intensiva en
-        <?= $model->servicioEducativo == 'egb' ? 'Educación General Básica Superior EGB-S' : 'Bachillerato General BG' ?>
+        Nro. <?= $model->identificacion ?> fue inscrito en la Modalidad Educativa: A DISTANCIA VIRTUAL
+        del Colegio de Bachillerato Teniente Hugo Ortiz, en el Periodo: CONVOCATORIA 1, en
+        <?= $model->servicioEducativo == 'egb' ? 'Educación General Básica Superior EGB-S' : 'Bachillerato General BG' ?>,
         el dia <?= date('d/m/Y',strtotime($model->fechaRegistro)) ?>
     </p>
 
@@ -31,31 +33,31 @@
             <table class="table table-bordered">
                 <tbody>
                     <tr>
-                        <td>Nacionalidad</td>
+                        <td class="bg-warning-subtle">Nacionalidad</td>
                         <td><?= ucfirst($model->nacionalidad) ?></td>
                     </tr>
                     <tr>
-                        <td>Provincia</td>
+                        <td class="bg-warning-subtle">Provincia</td>
                         <td><?= $model->ubicacion->provincia ?></td>
                     </tr>
                     <tr>
-                        <td>Cantón</td>
+                        <td class="bg-warning-subtle">Cantón</td>
                         <td><?= $model->ubicacion->canton ?></td>
                     </tr>
                     <tr>
-                        <td>Correo</td>
+                        <td class="bg-warning-subtle">Correo</td>
                         <td><?= $model->correo ?></td>
                     </tr>
                     <tr>
-                        <td>Teléfono</td>
+                        <td class="bg-warning-subtle">Teléfono</td>
                         <td><?= $model->telefonoPersonal ?></td>
                     </tr>
                     <tr>
-                        <td>Dirección</td>
+                        <td class="bg-warning-subtle">Dirección</td>
                         <td><?= $model->ubicacion->direccion ?></td>
                     </tr>
                     <tr>
-                        <td>Distrito</td>
+                        <td class="bg-warning-subtle">Distrito</td>
                         <td><?= $model->ubicacion->distrito ?></td>
                     </tr>
                 </tbody>
@@ -63,10 +65,52 @@
         </div>
     </div>
 
-    <div class="text-center" style="margin-top:140px">
-        <hr style="width:260px;margin:0 auto" />
-        <?= $model->apellidos ?> <?= $model->nombres ?>
-        <br />ASPIRANTE
+    <div class="row" style="margin-top:120px">
+        <div class="col-sm-6 text-center">
+            <hr style="width:260px;margin:0 auto" />
+            <?= $model->apellidos ?> <?= $model->nombres ?>
+            <br />ASPIRANTE
+        </div>
+        <div class="col-sm-4 text-center">
+            <hr style="width:260px;margin:0 auto" />
+            Sandra Bravo
+            <br />INSCRIPTOR
+        </div>
+    </div>    
+
+    <div class="mt-4" style="font-size:0.7rem">
+        <p>
+            Fecha de inicio de clases 30 de agosto de 2023.
+        </p>
+
+        <p style="text-align:justify">
+            <strong>Nota de descargo:</strong>
+            El/la aspirante declara que la información entregada en el presente documento 
+            es veraz y verificable.
+        </p>
+
+        <p style="text-align:justify">
+            El/la aspirante expresa que se acogerá a las responsabilidades, obligaciones y demás 
+            deberes que la modalidad Educativa a Distancia demande.
+        </p>
+
+        <p style="text-align:justify">
+            Concluida la inscripción, a partir de la fecha señalada en este documento y en el calendario 
+            académico correspondiente a la convocatoria; El/la aspirante debe ingresar a la página 
+            de la Modalidad Educativa: pceitenientehugoortiz.edu.ec con el numero de identificación 
+            tanto en usuario como en contraseña.
+        </p>
+
+        <p style="text-align:justify">
+            El/la aspirante NO pondrá acceder a la plataforma educativa hasta las fechas indicadas 
+            en este documento.
+        </p>
+
+        <p style="text-align:justify">
+            Si la información detallada en este certificado no es correcta podrá solicitar una 
+            corrección, a través del correo de soporte: soporteadistancia@gmail.com con 
+            el ASUNTO corrección datos.
+        </p>
     </div>
 
     <script type="text/javascript">
