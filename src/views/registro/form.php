@@ -245,9 +245,9 @@
             <div class="row mb-2">
                 <label class="col-form-label col-md-2" for="tieneHijos">¿Tiene hijos?</label>
                 <div class="radio-group col-md-3">
-                    <input type="radio" id="tieneHijosSi" name="tieneHijos" value="true" <?= $model->tieneHijos ? 'checked' : '' ?>>
+                    <input type="radio" id="tieneHijosSi" name="tieneHijos" value="1" <?= $model->tieneHijos ? 'checked' : '' ?>>
                     <label class="col-form-label col-md-2" for="tieneHijosSi">Sí</label>
-                    <input type="radio" id="tieneHijosNo" name="tieneHijos" value="false" <?= $model->tieneHijos ? '' : 'checked' ?>>
+                    <input type="radio" id="tieneHijosNo" name="tieneHijos" value="0" <?= $model->tieneHijos ? '' : 'checked' ?>>
                     <label class="col-form-label col-md-2" for="tieneHijosNo">No</label>
                 </div>
             </div>
@@ -278,9 +278,9 @@
             <div class="row mb-2">
                 <label class="col-form-label col-md-2" for="tieneDiscapacidad">¿Tiene discapacidad?</label>
                 <div class="radio-group col-md-3">
-                    <input type="radio" id="tieneDiscapacidadSi" name="discapacidad" value="true" <?= $model->discapacidad ? 'checked' : '' ?>>
+                    <input type="radio" id="tieneDiscapacidadSi" name="discapacidad" value="1" <?= $model->discapacidad ? 'checked' : '' ?>>
                     <label class="col-form-label col-md-2" for="tieneDiscapacidadSi">Sí</label>
-                    <input type="radio" id="tieneDiscapacidadNo" name="discapacidad" value="false" <?= $model->discapacidad ? '' : 'checked' ?>>
+                    <input type="radio" id="tieneDiscapacidadNo" name="discapacidad" value="0" <?= $model->discapacidad ? '' : 'checked' ?>>
                     <label class="col-form-label col-md-2" for="tieneDiscapacidadNo">No</label>
 
                     <p class="help-block">
@@ -337,18 +337,18 @@
             <div class="row mb-2">
                 <label class="col-form-label col-md-2" for="bonoDesarrollo">¿Recibe Bono de Desarrollo Humano?</label>
                 <div class="radio-group col-md-3">
-                    <input type="radio" id="bonoSi" name="recibeBono" value="true" <?= $model->recibeBono ? 'checked' : '' ?>>
+                    <input type="radio" id="bonoSi" name="recibeBono" value="1" <?= $model->recibeBono ? 'checked' : '' ?>>
                     <label class="col-form-label col-md-2" for="bonoSi">Sí</label>
-                    <input type="radio" id="bonoNo" name="recibeBono" value="false" <?= $model->recibeBono ? '' : 'checked' ?>>
+                    <input type="radio" id="bonoNo" name="recibeBono" value="0" <?= $model->recibeBono ? '' : 'checked' ?>>
                     <label class="col-form-label col-md-2" for="bonoNo">No</label>
                 </div>
             </div>
             <div class="row mb-2">
                 <label class="col-form-label col-md-2" for="tieneTrabajo">¿Tiene Trabajo?</label>
                 <div class="radio-group col-md-3">
-                    <input type="radio" id="trabajaSi" name="trabaja" value="true" <?= $model->trabaja ? 'checked' : '' ?>>
+                    <input type="radio" id="trabajaSi" name="trabaja" value="1" <?= $model->trabaja ? 'checked' : '' ?>>
                     <label class="col-form-label col-md-2" for="trabajaSi">Sí</label>
-                    <input type="radio" id="trabajaNo" name="trabaja" value="false" <?= $model->trabaja ? '' : 'checked' ?>>
+                    <input type="radio" id="trabajaNo" name="trabaja" value="0" <?= $model->trabaja ? '' : 'checked' ?>>
                     <label class="col-form-label col-md-2" for="trabajaNo">No</label>
                 </div>
             </div>

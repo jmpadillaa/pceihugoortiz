@@ -25,7 +25,6 @@ abstract class BaseRepository {
         $className = get_class($obj);
 
         $vars = $this->getMapeableProperties($className);
-        var_dump($vars);
 
         if ($obj->id == 0) {
             $query = $this->createInsertQuery($className, $vars);
@@ -37,7 +36,11 @@ abstract class BaseRepository {
 
         foreach ($vars as $key) {
             if (isset($obj->$key)) {
-                $stm->bindValue(':' . $key, $obj->$key);
+                if (is_bool($obj->$key)) {
+                    $stm->bindValue(':' . $key, $obj->$key, PDO::PARAM_BOOL);
+                } else {
+                    $stm->bindValue(':' . $key, $obj->$key);
+                }                
             } else {
                 $stm->bindValue(':' . $key, null);
             }

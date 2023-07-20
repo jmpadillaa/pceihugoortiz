@@ -83,7 +83,7 @@ let inputsDisc = document.querySelectorAll('.discapacidad');
 
 document.querySelectorAll('#tieneDiscapacidadSi, #tieneDiscapacidadNo').forEach(function(i) {
     i.addEventListener('change', function () {   
-        let enable = this.value === 'true';
+        let enable = this.value === '1';
       
         toggleInputs(enable, inputsDisc);
     });
