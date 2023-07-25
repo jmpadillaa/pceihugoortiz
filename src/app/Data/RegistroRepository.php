@@ -5,7 +5,9 @@ namespace App\Data;
 use App\Models\Aspirante;
 use App\Models\Representante;
 use App\Models\Ubicacion;
+use App\Models\Usuario;
 
+use Exception;
 use PDO;
 
 class RegistroRepository extends BaseRepository {
@@ -56,6 +58,7 @@ class RegistroRepository extends BaseRepository {
         $a = $this->getById($id, Aspirante::class);
         $a->representante = $this->getById($a->representante_id, Representante::class);
         $a->ubicacion = $this->getById($a->ubicacion_id, Ubicacion::class);
+        $a->usuario = $this->getById($a->usuario_id, Usuario::class);
         
         return $a;
     }

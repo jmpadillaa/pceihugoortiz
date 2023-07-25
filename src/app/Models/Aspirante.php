@@ -37,7 +37,9 @@ class Aspirante {
 
     public int $representante_id = 0;
     public int $ubicacion_id = 0;
+    public int $usuario_id = 0;
 
     public object $representante;
     public object $ubicacion;
+    public object $usuario;
 }

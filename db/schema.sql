@@ -1,7 +1,3 @@
--- Creación de la base de datos
-CREATE DATABASE formulario_registro;
-
--- Creación de la tabla "Aspirante"
 CREATE TABLE aspirante (
   id SERIAL PRIMARY KEY,
   nombres CHARACTER VARYING(50),
@@ -36,11 +32,12 @@ CREATE TABLE aspirante (
   servicioeducativo CHARACTER VARYING(50),
   representante_id INTEGER,
   ubicacion_id INTEGER,
+  usuario_id INTEGER,
   CONSTRAINT representante_fk FOREIGN KEY (representante_id) REFERENCES public.representante(id),
-  CONSTRAINT ubicacion_fk FOREIGN KEY (ubicacion_id) REFERENCES public.ubicacion(id)
+  CONSTRAINT ubicacion_fk FOREIGN KEY (ubicacion_id) REFERENCES public.ubicacion(id),
+  CONSTRAINT usuario_fk FOREIGN KEY (usuario_id) REFERENCES public.usuario(id)
 );
 
--- Creación de la tabla "Representante"
 CREATE TABLE representante (
   id SERIAL PRIMARY KEY,
   parentesco CHARACTER VARYING(50),
@@ -54,7 +51,6 @@ CREATE TABLE representante (
   aspirante_id INTEGER
 );
 
--- Creación de la tabla "Ubicacion"
 CREATE TABLE ubicacion (
   id SERIAL PRIMARY KEY,
   provincia CHARACTER VARYING(50),

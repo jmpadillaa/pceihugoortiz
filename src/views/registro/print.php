@@ -23,7 +23,7 @@
     <p class="my-4" style="text-align:justify">
         El/la aspirante <?= $model->apellidos ?> <?= $model->nombres ?> portador/a del documento
         Nro. <?= $model->identificacion ?> fue inscrito en la Modalidad Educativa: A DISTANCIA VIRTUAL
-        del Colegio de Bachillerato Teniente Hugo Ortiz, en el Periodo: CONVOCATORIA 1, en
+        del Colegio de Bachillerato PCEI Teniente Hugo Ortiz, en el Periodo: CONVOCATORIA 1, en
         <?= $model->servicioEducativo == 'egb' ? 'Básica superior' : 'Bachillerato' ?>,
         el dia <?= date('d/m/Y',strtotime($model->fechaRegistro)) ?>
     </p>
@@ -73,8 +73,8 @@
         </div>
         <div class="col text-center">
             <hr style="width:260px;margin:0 auto" />
-            Sandra Bravo
-            <br />INSCRIPTOR
+            <?= $model->usuario->nombre ?>
+            <br />ANALISTA DISTRITAL
         </div>
     </div>    
 

@@ -51,7 +51,8 @@ class RegistroController extends BaseController {
             $this->mapModel($a, $_POST);
 
             if ($a->id == 0) {
-                $a->fechaRegistro = date(DateTimeInterface::ISO8601, time());
+                $a->fechaRegistro = date(DateTimeInterface::ATOM, time());
+                $a->usuario_id = $_SESSION['userId'];
             }
 
             $this->mapModel($a->representante, $_POST['representante']);
