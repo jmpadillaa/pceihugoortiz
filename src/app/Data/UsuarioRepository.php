@@ -17,5 +17,11 @@ class UsuarioRepository extends BaseRepository {
         $stm->setFetchMode(PDO::FETCH_CLASS, Usuario::class);
 
         return $stm->fetch();
-    }    
+    }
+
+    public function guardarUsuario($usuario) {
+        $this->createConnection();
+
+        $this->saveOrUpdate($usuario);
+    }
 }

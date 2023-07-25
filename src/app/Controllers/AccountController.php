@@ -40,4 +40,30 @@ class AccountController extends BaseController {
 
         return $this->redirect('/account/login');
     }
+
+    public function password() {
+        if (!$this->isAuthenticated()) {
+            return $this->redirect('/account/login');
+        }
+
+        if ($this->isPost()) {
+            $pwd = $_POST['password'];
+            $newPwd = $_POST['newPassword'];
+
+            $usuario = $this->repo->obtenerUsuario($_SESSION['userLogin']);
+
+            if (password_verify($pwd, $usuario->password)) {
+                $usuario->password = password_hash($newPwd, PASSWORD_BCRYPT);
+                $this->repo->guardarUsuario($usuario);
+
+                $this->successMsg('Tu contraseña ha sido cambiada');
+
+                return $this->redirect('/registro');
+            } else {
+                $this->errorMsg('La contraseña actual no es correcta');
+            }
+        }
+
+        return $this->view('account/password');
+    }
 }
